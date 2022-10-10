@@ -17,18 +17,14 @@ table {
 td {
   background: white;
   color: teal;
-  /* Цвет фона ячеек */
   padding: 5px;
-  /* Поля вокруг текста */
   width: 25%;
 }
 
 th {
   background: teal;
   color: white;
-  /* Цвет фона ячеек */
   padding: 5px;
-  /* Поля вокруг текста */
   width: 25%;
 }
 

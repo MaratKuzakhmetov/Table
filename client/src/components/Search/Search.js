@@ -2,23 +2,25 @@ import React, { useState } from 'react'
 
 function Search({filteredData, data, setFilteredData}) {
 
-  const [firstAttribute, setFirstAttribute] = useState('');
-  const [secondAttribute, setSecondAttribute] = useState('');
-  const [filterValue, setFilterValue] = useState('');
+  const [firstAttribute, setFirstAttribute] = useState(''); // первый атрибут (Название, Кол-во или Расстояние)
+  const [secondAttribute, setSecondAttribute] = useState(''); // второй атрибут (в зависимости от выбранного первого аттрибута)
+  const [filterValue, setFilterValue] = useState(''); // для инпута
   
-
+  // выбираем первый аттрибут
   const handleSortBy = (event) => {
     const selected = event.target.value;
     setFirstAttribute(selected);
     event.preventDefault();
   }
 
+  // выбираем второй аттрибут
   const handleSortBySecond = (event) => {
     const selected = event.target.value;
     setSecondAttribute(selected);
     event.preventDefault();
   }
 
+  // реализуем инпут. В зависимости от выбранных условий мы применяем тот или иной метод
   const handleSearch = (event) => {
     const searchedValue = event.target.value;
     setFilterValue(searchedValue);
